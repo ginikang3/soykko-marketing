@@ -1,5 +1,5 @@
 import React from 'react';
-import { Monitor, Video, BarChart3, ArrowRight, CheckCircle2, MessageCircle, Mail, Globe } from 'lucide-react';
+import { Monitor, Video, BarChart3, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -62,7 +62,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-4 tracking-tight">영상 제작</h3>
               <div className="space-y-4 text-slate-500 text-sm leading-relaxed font-medium">
                 <p>• <strong>UGC 형식 제작</strong>: 2차 활용권 포함 고퀄리티 영상</p>
-                <p>• <strong>채널 콜라보</strong>: 크리에이터 채널을 활용한 바이럴 극대화</p>
+                <p>• <strong>채널 콜라보</strong>: 브랜드 홍보 및 바이럴 극대화</p>
               </div>
             </div>
 
@@ -72,7 +72,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold mb-4 tracking-tight">광고 대행</h3>
               <p className="text-slate-500 leading-relaxed mb-6 font-medium">
-                사업체의 핵심 타겟과 관심층을 정밀하게 타겟팅하여 광고를 운영하고 효율을 최적화합니다.
+                핵심 타겟과 관심층을 정밀하게 분석하여 고효율 퍼포먼스 마케팅을 운영합니다.
               </p>
             </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold mb-4 tracking-tight">웹사이트 제작</h3>
               <p className="text-slate-500 leading-relaxed mb-6 font-medium">
-                브랜드 아이덴티티를 담은 고성능 랜딩 페이지를 구축합니다. 빠른 속도와 SEO 최적화를 기본으로 제공합니다.
+                Next.js 기반의 고성능 랜딩 페이지를 구축하며, SEO 최적화를 기본으로 제공합니다.
               </p>
             </div>
           </div>
@@ -116,25 +116,23 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
-              <h3 className="text-xl font-bold mb-6 flex items-center underline underline-offset-8 decoration-blue-500">Global Connect</h3>
-              <div className="space-y-4">
-                <a 
-                  href="https://www.tiktok.com/@kkangs2002?_r=1&_t=ZS-95qDvJYHwLB" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full py-4 bg-white text-black text-center rounded-2xl font-black hover:bg-blue-500 hover:text-white transition-all"
-                >
-                  TikTok Channel
-                </a>
-              </div>
+            <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 text-center">
+              <h3 className="text-xl font-bold mb-6 underline underline-offset-8 decoration-blue-500">Global Connect</h3>
+              <a 
+                href="https://www.tiktok.com/@kkangs2002?_r=1&_t=ZS-95qDvJYHwLB" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-4 bg-white text-black text-center rounded-2xl font-black hover:bg-blue-500 hover:text-white transition-all mb-4"
+              >
+                TikTok Channel
+              </a>
             </div>
           </div>
           <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600 rounded-full blur-[150px] opacity-20 translate-x-1/3 -translate-y-1/3" />
         </div>
       </section>
 
-      <footer className="py-12 text-center text-slate-400 text-sm">
+      <footer className="py-12 text-center text-slate-400 text-sm font-medium border-t border-slate-50">
         © 2026 soykko. All rights reserved.
       </footer>
     </div>
