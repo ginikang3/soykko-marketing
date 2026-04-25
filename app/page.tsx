@@ -5,14 +5,6 @@ import { Monitor, Video, BarChart3, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Home() {
-  // 애니메이션 변수 설정
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, margin: "-100px" },
-    transition: { duration: 0.6, ease: "easeOut" }
-  };
-
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans break-keep overflow-x-hidden">
       {/* Navigation */}
@@ -49,8 +41,7 @@ export default function Home() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Brand Vision.</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-500 mb-12 leading-relaxed max-w-2xl">
-              크리에이터의 감각으로 만드는 숏폼 콘텐츠부터, 
-              실제 매출로 이어지는 광고 대행과 고성능 웹사이트 제작까지 비즈니스의 모든 과정을 함께합니다.
+              크리에이터의 감각으로 만드는 숏폼 콘텐츠부터, 실제 매출로 이어지는 광고 대행과 고성능 웹사이트 제작까지 비즈니스의 모든 과정을 함께합니다.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#contact" className="w-full md:w-auto px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all flex items-center justify-center group">
@@ -67,10 +58,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="mb-16 md:mb-20"
-            initial={fadeInUp.initial}
-            whileInView={fadeInUp.whileInView}
-            viewport={fadeInUp.viewport}
-            transition={fadeInUp.transition}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-black mb-4">Service Details</h2>
             <p className="text-slate-500 font-medium text-base md:text-lg">비즈니스의 가치를 극대화하는 soykko의 전문 서비스</p>
@@ -79,10 +70,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <motion.div 
               className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-blue-200 transition-all"
-              initial={fadeInUp.initial}
-              whileInView={fadeInUp.whileInView}
-              viewport={fadeInUp.viewport}
-              transition={{ ...fadeInUp.transition, delay: 0.1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-100">
                 <Video size={28} />
@@ -96,10 +87,10 @@ export default function Home() {
 
             <motion.div 
               className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-indigo-200 transition-all"
-              initial={fadeInUp.initial}
-              whileInView={fadeInUp.whileInView}
-              viewport={fadeInUp.viewport}
-              transition={{ ...fadeInUp.transition, delay: 0.2 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-100">
                 <BarChart3 size={28} />
@@ -112,10 +103,10 @@ export default function Home() {
 
             <motion.div 
               className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-emerald-200 transition-all"
-              initial={fadeInUp.initial}
-              whileInView={fadeInUp.whileInView}
-              viewport={fadeInUp.viewport}
-              transition={{ ...fadeInUp.transition, delay: 0.3 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-black text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-slate-200">
                 <Monitor size={28} />
@@ -133,10 +124,10 @@ export default function Home() {
       <section id="contact" className="py-20 md:py-32 px-6">
         <motion.div 
           className="max-w-5xl mx-auto bg-slate-900 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-20 text-white relative overflow-hidden"
-          initial={fadeInUp.initial}
-          whileInView={fadeInUp.whileInView}
-          viewport={fadeInUp.viewport}
-          transition={fadeInUp.transition}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div>
