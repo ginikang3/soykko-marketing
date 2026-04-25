@@ -12,7 +12,6 @@ export default function Home() {
           </div>
           <div className="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wider text-slate-600">
             <a href="#services" className="hover:text-blue-600 transition">Services</a>
-            <a href="#about" className="hover:text-blue-600 transition">About</a>
             <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
           </div>
         </div>
@@ -50,58 +49,41 @@ export default function Home() {
       {/* Services Section */}
       <section id="services" className="py-32 bg-slate-50 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-20 text-center md:text-left">
+          <div className="mb-20">
             <h2 className="text-4xl font-black mb-4">Service Details</h2>
             <p className="text-slate-500 font-medium text-lg">비즈니스의 가치를 극대화하는 soykko의 전문 서비스</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {/* 영상 제작 */}
             <div className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-blue-200 transition-all">
               <div className="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-100">
                 <Video size={28} />
               </div>
               <h3 className="text-2xl font-bold mb-4 tracking-tight">영상 제작</h3>
-              <div className="space-y-6">
-                <div>
-                  <p className="font-bold text-blue-600 text-sm mb-2">UGC 형식 제작</p>
-                  <p className="text-slate-500 text-sm leading-relaxed">2차 활용권 포함, 공식 채널 업로드용 고퀄리티 영상 제작</p>
-                </div>
-                <div>
-                  <p className="font-bold text-blue-600 text-sm mb-2">채널 콜라보</p>
-                  <p className="text-slate-500 text-sm leading-relaxed">크리에이터 채널을 활용한 브랜드 홍보 및 바이럴 극대화</p>
-                </div>
+              <div className="space-y-4 text-slate-500 text-sm leading-relaxed font-medium">
+                <p>• <strong>UGC 형식 제작</strong>: 2차 활용권 포함 고퀄리티 영상</p>
+                <p>• <strong>채널 콜라보</strong>: 크리에이터 채널을 활용한 바이럴 극대화</p>
               </div>
             </div>
 
-            {/* 광고 대행 */}
             <div className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-indigo-200 transition-all">
               <div className="w-14 h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-100">
                 <BarChart3 size={28} />
               </div>
               <h3 className="text-2xl font-bold mb-4 tracking-tight">광고 대행</h3>
-              <p className="text-slate-500 leading-relaxed mb-6">
-                사업체의 핵심 타겟과 관심층을 정밀하게 타겟팅하여 광고를 세팅하고 효율적으로 운영합니다.
+              <p className="text-slate-500 leading-relaxed mb-6 font-medium">
+                사업체의 핵심 타겟과 관심층을 정밀하게 타겟팅하여 광고를 운영하고 효율을 최적화합니다.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-bold rounded-full">정밀 타겟팅</span>
-                <span className="px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-bold rounded-full">ROAS 최적화</span>
-              </div>
             </div>
 
-            {/* 웹사이트 제작 */}
             <div className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-emerald-200 transition-all">
               <div className="w-14 h-14 bg-black text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-slate-200">
                 <Monitor size={28} />
               </div>
               <h3 className="text-2xl font-bold mb-4 tracking-tight">웹사이트 제작</h3>
-              <p className="text-slate-500 leading-relaxed mb-6">
-                브랜드 아이덴티티를 담은 고성능 랜딩 페이지를 구축합니다. 빠른 속도와 SEO 최적화로 검색 노출을 지향합니다.
+              <p className="text-slate-500 leading-relaxed mb-6 font-medium">
+                브랜드 아이덴티티를 담은 고성능 랜딩 페이지를 구축합니다. 빠른 속도와 SEO 최적화를 기본으로 제공합니다.
               </p>
-              <ul className="space-y-2 text-sm text-slate-500 font-medium">
-                <li className="flex items-center"><CheckCircle2 className="w-4 h-4 mr-2 text-black" /> SEO 최적화 기본 포함</li>
-                <li className="flex items-center"><CheckCircle2 className="w-4 h-4 mr-2 text-black" /> 모바일 반응형 완벽 대응</li>
-              </ul>
             </div>
           </div>
         </div>
@@ -113,18 +95,11 @@ export default function Home() {
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
-                Let's <br />Collaborate.
+                Let&apos;s <br />Collaborate.
               </h2>
-              <p className="text-slate-400 text-lg mb-10">
-                멕시코 및 한국 비즈니스 성장을 위해 상담을 시작하세요. <br />
-                모든 문의에 빠르게 답변드립니다.
-              </p>
-              
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/10 shrink-0">
-                    <MessageCircle className="text-blue-400" size={20} />
-                  </div>
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/10 shrink-0 text-blue-400 font-bold">W</div>
                   <div>
                     <p className="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">WhatsApp / Phone</p>
                     <p className="text-lg font-bold">🇲🇽 +52 56 12 77 33 65</p>
@@ -132,9 +107,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/10">
-                    <Mail className="text-blue-400" size={20} />
-                  </div>
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/10 shrink-0 text-blue-400 font-bold">@</div>
                   <div>
                     <p className="text-xs text-slate-400 uppercase font-bold tracking-widest">Email</p>
                     <p className="text-lg font-bold">kangsyoutube@naver.com</p>
@@ -144,9 +117,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
-              <h3 className="text-xl font-bold mb-6 flex items-center">
-                <Globe className="mr-2 text-blue-400" size={20} /> Global Connect
-              </h3>
+              <h3 className="text-xl font-bold mb-6 flex items-center underline underline-offset-8 decoration-blue-500">Global Connect</h3>
               <div className="space-y-4">
                 <a 
                   href="https://www.tiktok.com/@kkangs2002?_r=1&_t=ZS-95qDvJYHwLB" 
@@ -156,16 +127,9 @@ export default function Home() {
                 >
                   TikTok Channel
                 </a>
-                <a 
-                  href="mailto:kangsyoutube@naver.com"
-                  className="block w-full py-4 bg-white/10 text-white text-center rounded-2xl font-bold hover:bg-white/20 transition-all border border-white/20"
-                >
-                  이메일 문의하기
-                </a>
               </div>
             </div>
           </div>
-          
           <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600 rounded-full blur-[150px] opacity-20 translate-x-1/3 -translate-y-1/3" />
         </div>
       </section>
