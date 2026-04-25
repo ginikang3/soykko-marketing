@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "soykko | 마케팅 전문 에이전시",
+    title: "soykko | 마케팅 전문",
     description: "안녕하세요, 마케팅 전문 soykko입니다.",
     images: ["/og-image.png"],
   },
