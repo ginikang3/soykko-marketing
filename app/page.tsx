@@ -1,9 +1,20 @@
+'use client';
+
 import React from 'react';
 import { Monitor, Video, BarChart3, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
+  // 애니메이션 변수 설정
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: "-100px" },
+    transition: { duration: 0.6, ease: "easeOut" }
+  };
+
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans break-keep">
+    <div className="min-h-screen bg-white text-slate-900 font-sans break-keep overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -19,7 +30,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-32 md:pt-44 pb-20 md:pb-32 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto relative z-10">
+        <motion.div 
+          className="max-w-7xl mx-auto relative z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="max-w-4xl">
             <div className="inline-flex items-center space-x-2 px-3 py-1 mb-8 bg-slate-100 text-slate-700 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase">
               <span className="relative flex h-2 w-2">
@@ -42,20 +58,32 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[120px] -z-10 opacity-60" />
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-20 md:py-32 bg-slate-50 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16 md:mb-20">
+          <motion.div 
+            className="mb-16 md:mb-20"
+            initial={fadeInUp.initial}
+            whileInView={fadeInUp.whileInView}
+            viewport={fadeInUp.viewport}
+            transition={fadeInUp.transition}
+          >
             <h2 className="text-3xl md:text-4xl font-black mb-4">Service Details</h2>
             <p className="text-slate-500 font-medium text-base md:text-lg">비즈니스의 가치를 극대화하는 soykko의 전문 서비스</p>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-blue-200 transition-all">
+            <motion.div 
+              className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-blue-200 transition-all"
+              initial={fadeInUp.initial}
+              whileInView={fadeInUp.whileInView}
+              viewport={fadeInUp.viewport}
+              transition={{ ...fadeInUp.transition, delay: 0.1 }}
+            >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-100">
                 <Video size={28} />
               </div>
@@ -64,9 +92,15 @@ export default function Home() {
                 <p>• <strong>UGC 형식 제작</strong>: 2차 활용권 포함 고퀄리티 영상</p>
                 <p>• <strong>채널 콜라보</strong>: 브랜드 홍보 및 바이럴 극대화</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-indigo-200 transition-all">
+            <motion.div 
+              className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-indigo-200 transition-all"
+              initial={fadeInUp.initial}
+              whileInView={fadeInUp.whileInView}
+              viewport={fadeInUp.viewport}
+              transition={{ ...fadeInUp.transition, delay: 0.2 }}
+            >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-100">
                 <BarChart3 size={28} />
               </div>
@@ -74,9 +108,15 @@ export default function Home() {
               <p className="text-slate-500 leading-relaxed mb-6 font-medium text-sm">
                 핵심 타겟과 관심층을 정밀하게 분석하여 고효율 퍼포먼스 마케팅을 운영합니다.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-emerald-200 transition-all">
+            <motion.div 
+              className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-emerald-200 transition-all"
+              initial={fadeInUp.initial}
+              whileInView={fadeInUp.whileInView}
+              viewport={fadeInUp.viewport}
+              transition={{ ...fadeInUp.transition, delay: 0.3 }}
+            >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-black text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-slate-200">
                 <Monitor size={28} />
               </div>
@@ -84,14 +124,20 @@ export default function Home() {
               <p className="text-slate-500 leading-relaxed mb-6 font-medium text-sm">
                 Next.js 기반의 고성능 랜딩 페이지를 구축하며, SEO 최적화를 기본으로 제공합니다.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 md:py-32 px-6">
-        <div className="max-w-5xl mx-auto bg-slate-900 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-20 text-white relative overflow-hidden">
+        <motion.div 
+          className="max-w-5xl mx-auto bg-slate-900 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-20 text-white relative overflow-hidden"
+          initial={fadeInUp.initial}
+          whileInView={fadeInUp.whileInView}
+          viewport={fadeInUp.viewport}
+          transition={fadeInUp.transition}
+        >
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-6xl font-black mb-8 leading-tight">
@@ -129,7 +175,7 @@ export default function Home() {
             </div>
           </div>
           <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600 rounded-full blur-[150px] opacity-20 translate-x-1/3 -translate-y-1/3" />
-        </div>
+        </motion.div>
       </section>
 
       <footer className="py-12 text-center text-slate-400 text-xs md:text-sm font-medium border-t border-slate-50">
