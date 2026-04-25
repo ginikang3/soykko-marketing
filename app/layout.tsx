@@ -20,13 +20,22 @@ export const metadata: Metadata = {
   openGraph: {
     title: "soykko | 마케팅 전문 에이전시",
     description: "안녕하세요, 마케팅 전문 soykko입니다. 영상 제작, 광고 대행, 웹사이트 구축 솔루션을 제공합니다.",
+    type: "website",
+    locale: "ko_KR",
     images: [
       {
         url: "/og-image.png", // public 폴더에 이 이름으로 이미지를 넣으세요.
         width: 1200,
         height: 630,
+        alt: "soykko logo",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "soykko | 마케팅 전문 에이전시",
+    description: "안녕하세요, 마케팅 전문 soykko입니다.",
+    images: ["/og-image.png"],
   },
 };
 
